@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Styles.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Insert Product into the Product Inventory</h1>
+        <hr/>
+        <form method="POST">
+            {%csrf_token%}
+        <table border = "3">
+            <tr>
+                <tr>
+                <td>Product Name</td>
+                <td><input type = "text" placeholder = "Enter Product Name", name="Product_Name"></td>
+                </tr>
+                <tr>
+                <td>Product Description</td>
+                <td><input type = "text" placeholder = "Enter Product Description", name = "Product_Description"></td>
+                </tr>
+                <tr>
+                <td>Product Quantity</td>
+                <td><input type="number" placeholder = "Enter Product Quantity", name = "Product_Quantity"></td>
+                </tr>
+                <tr>
+                <td>Product Price</td>
+                <td><input type="number" placeholder="Enter Product Price" name="Prodcut_Price"></td>
+                </tr>
+                <tr>
+                <td>Username</td>
+                <td><input type="text" placeholder="Enter a registered username" name="Username_id"></td>
+                </tr>
+                <tr>
+                <td>User Id</td>
+                <td><input type="text" placeholder="Enter a registered user id" name="User_Id_id"></td>
+                </tr>
+                <tr>
+                <td><input type="submit" value="Insert"/>
+                <td> {% if messages %}
+                    {% for mess in messages %}
+                    <b style="color:green;">{{mess}}</b>
+                    {% endfor %}
+                    {% endif %}</td>
+                </tr>
+            </tr>
+        </table>
+        <a href="{% url '' %}">Go to Home Page</a>
+    </form>
+    </center>
+</body>
