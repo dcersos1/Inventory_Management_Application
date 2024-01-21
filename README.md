@@ -7,9 +7,13 @@ Welcome to my Inventory Management Application! A description of the application
 #Summary of my work
 
 • Facilitated the design and execution of this application for unique users to be able to execute the necessary CRUD operations
+
 • Support for specific manager login and random generated ID for enhanced documentation of user action upon the inventory
+
 • Configured PostgreSQL as the database and leveraged the ORM of Django to migrate classes of Python objects to serve as tables
+
 • Employed the Django REST framework to streamline the connection between the user interface and backend logic
+
 • Utilized HTML for UI structure while incorporating CSS for enhanced display and functionality
 
 #Explanation of functionality
