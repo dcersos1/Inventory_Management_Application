@@ -23,7 +23,7 @@ def generate_random_product_id():
     auto = int(auto)
     return auto
 
-#Function for the insert page to give the http request from the insert html functionality with the database 
+#Function to give the insert page functionality by intepreting the http requests for the desired action to be executed
 #Also ensures that the attempted changes by a front end user are realized in the database with a message displayed for sucess and failure
 def InsertProducts(request):
     if request.method == "POST":
